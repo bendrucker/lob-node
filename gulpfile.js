@@ -5,6 +5,7 @@ var mocha = require('gulp-mocha');
 var istanbul = require('gulp-istanbul');
 var clean = require('gulp-clean');
 var exit = require('gulp-exit');
+var argv = require('yargs').argv;
 var coverageEnforcer = require('gulp-istanbul-enforcer');
 var jscs = require('gulp-jscs');
 var gutil = require('gulp-util');
@@ -18,7 +19,7 @@ var paths = {
 
 gulp.task('test', ['lint','style'],  function () {
   gulp.src(paths.testFiles)
-    .pipe(mocha({reporter: 'spec', timeout: 15000}))
+    .pipe(mocha({reporter: 'spec', timeout: 15000, grep: argv.grep}))
     .on('error', function (error) {
       gutil.log(gutil.colors.red(error.message));
     })
