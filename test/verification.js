@@ -4,7 +4,7 @@ var Should;
 Should = require('should');
 /* jshint camelcase: false */
 
-describe('Verification', function () {
+describe('verification', function () {
   it('should have correct defaults', function (done) {
     var addressLine1 = '220 William T Morrissey Boulevard';
     var addressCity = 'Boston';
@@ -18,17 +18,17 @@ describe('Verification', function () {
     }, function (err, res) {
       res.should.have.property('address');
       res.address.should.have.property('address_line1');
-      res.address.address_line1.should.eql('220 William T Morrissey Blvd');
+      res.address.address_line1.should.eql('220 WILLIAM T MORRISSEY BLVD');
       res.address.should.have.property('address_line2');
       res.address.address_line2.should.eql('');
       res.address.should.have.property('address_city');
-      res.address.address_city.should.eql('Boston');
+      res.address.address_city.should.eql('BOSTON');
       res.address.should.have.property('address_state');
       res.address.address_state.should.eql('MA');
       res.address.should.have.property('address_zip');
       res.address.address_zip.should.eql('02125-3314');
       res.address.should.have.property('address_country');
-      res.address.address_country.should.eql('United States');
+      res.address.address_country.should.eql('US');
       res.address.should.have.property('object');
       res.address.object.should.eql('address');
       return done();
@@ -62,17 +62,17 @@ describe('Verification', function () {
     }, function (err, res) {
       res.should.have.property('address');
       res.address.should.have.property('address_line1');
-      res.address.address_line1.should.eql('325 Berry St');
+      res.address.address_line1.should.eql('325 BERRY ST');
       res.address.should.have.property('address_line2');
       res.address.address_line2.should.eql('');
       res.address.should.have.property('address_city');
-      res.address.address_city.should.eql('San Francisco');
+      res.address.address_city.should.eql('SAN FRANCISCO');
       res.address.should.have.property('address_state');
       res.address.address_state.should.eql('CA');
       res.address.should.have.property('address_zip');
       res.address.address_zip.should.eql('94158-1553');
       res.address.should.have.property('address_country');
-      res.address.address_country.should.eql('United States');
+      res.address.address_country.should.eql('US');
       res.should.have.property('message');
       res.address.should.have.property('object');
       res.address.object.should.eql('address');
