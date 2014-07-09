@@ -4,7 +4,7 @@ var Should;
 Should = require('should');
 var fs = require('fs');
 /* jshint camelcase: false */
-describe('Objects', function () {
+describe('objects', function () {
   describe('list', function () {
     it('should error with an invalid count or offset', function (done) {
       Lob.objects.list({offset: 0, count: 10000}, function (err) {
