@@ -3,7 +3,7 @@ Lob = new Lob('test_0dc8d51e0acffcb1880e0f19c79b2f5b0cc');
 var should = require('should');
 var fs = require('fs');
 /* jshint camelcase: false */
-describe('Postcards', function () {
+describe('postcards', function () {
   describe('list', function () {
     it('should error with an invalid count or offset', function (done) {
       Lob.postcards.list({offset: 0,count: 1000}, function (err) {
