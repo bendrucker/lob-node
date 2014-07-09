@@ -3,7 +3,7 @@ Lob = new Lob('test_0dc8d51e0acffcb1880e0f19c79b2f5b0cc');
 var Should;
 Should = require('should');
 /* jshint camelcase: false */
-describe('Addresses', function () {
+describe('addresses', function () {
   describe('list', function () {
     it('should have correct defaults', function (done) {
       Lob.addresses.list(function (err, res) {
@@ -68,7 +68,7 @@ describe('Addresses', function () {
       var addressLine1 = '123 Test Street';
       var addressLine2 = 'Unit 123';
       var addressCity = 'San Francisco';
-      var addressState = 'California';
+      var addressState = 'CA';
       var addressZip = '94158';
       var addressCountry = 'US';
       Lob.addresses.create({
